@@ -1,0 +1,96 @@
+[TRACE]    [com.revature.app.App]    
+Trace app test Feb-02-2021 Tuesday PST 16:26:49 
+
+[DEBUG]    [com.revature.app.App]    
+Debug app test Feb-02-2021 Tuesday PST 16:26:49 
+
+[INFO]    [com.revature.app.App]    
+Info app test Feb-02-2021 Tuesday PST 16:26:49 
+
+[DEBUG]    [com.revature.app.App]    
+Client [age=1200, bankAccountNum=0, firstName=Deltron, gender=ColdSteel, id=0, lastName=Spectro, username=Deltronox] was created successfully!  Feb-02-2021 Tuesday PST 16:26:49 
+
+[INFO]    [com.revature.ui.login.Login]    
+Invalid selection. Please try again. Feb-03-2021 Wednesday PST 12:14:27 
+
+[INFO]    [com.revature.ui.login.Login]    
+Invalid selection. Please try again. Feb-03-2021 Wednesday PST 12:15:03 
+
+[INFO]    [com.revature.ui.login.Login]    
+Invalid selection. Please try again. Feb-03-2021 Wednesday PST 13:51:30 
+
+[DEBUG]    [com.revature.dao.clientDao.ClientDaoImpl]    
+The column name client_password was not found in this ResultSet. Feb-03-2021 Wednesday PST 15:21:58 
+
+[INFO]    [com.revature.ui.login.ClientLogin]    
+Username or Password invalid Feb-03-2021 Wednesday PST 15:21:58 
+
+[INFO]    [com.revature.ui.login.Login]    
+Invalid selection. Please try again. Feb-03-2021 Wednesday PST 15:25:00 
+
+[DEBUG]    [com.revature.dao.clientDao.ClientDaoImpl]    
+The column name client_password was not found in this ResultSet. Feb-03-2021 Wednesday PST 15:25:32 
+
+[DEBUG]    [com.revature.ui.login.ClientLogin]    
+Client [age=0, bankAccountNum=0, firstName=null, gender=null, id=0, lastName=null, username=xStaples] Feb-03-2021 Wednesday PST 15:25:32 
+
+[DEBUG]    [com.revature.ui.login.ClientLogin]    
+false Feb-03-2021 Wednesday PST 15:25:32 
+
+[INFO]    [com.revature.ui.login.ClientLogin]    
+Username or Password invalid Feb-03-2021 Wednesday PST 15:25:32 
+
+[INFO]    [com.revature.ui.login.Login]    
+Invalid selection. Please try again. Feb-03-2021 Wednesday PST 15:26:25 
+
+[DEBUG]    [com.revature.dao.clientDao.ClientDaoImpl]    
+The column name password was not found in this ResultSet. Feb-03-2021 Wednesday PST 15:26:37 
+
+[DEBUG]    [com.revature.ui.login.ClientLogin]    
+Client [age=0, bankAccountNum=0, firstName=null, gender=null, id=0, lastName=null, username=xStaples] Feb-03-2021 Wednesday PST 15:26:37 
+
+[DEBUG]    [com.revature.ui.login.ClientLogin]    
+false Feb-03-2021 Wednesday PST 15:26:37 
+
+[INFO]    [com.revature.ui.login.ClientLogin]    
+Username or Password invalid Feb-03-2021 Wednesday PST 15:26:37 
+
+[INFO]    [com.revature.ui.login.Login]    
+Invalid selection. Please try again. Feb-03-2021 Wednesday PST 15:28:11 
+
+[DEBUG]    [com.revature.dao.clientDao.ClientDaoImpl]    
+The column name password was not found in this ResultSet. Feb-03-2021 Wednesday PST 15:28:23 
+
+[DEBUG]    [com.revature.ui.login.ClientLogin]    
+Client [age=0, bankAccountNum=0, firstName=null, gender=null, id=0, lastName=null, password=HailSanta, username=xStaples] Feb-03-2021 Wednesday PST 15:28:23 
+
+[DEBUG]    [com.revature.ui.login.ClientLogin]    
+false Feb-03-2021 Wednesday PST 15:28:23 
+
+[INFO]    [com.revature.ui.login.ClientLogin]    
+Username or Password invalid Feb-03-2021 Wednesday PST 15:28:23 
+
+[INFO]    [com.revature.ui.login.Login]    
+Invalid selection. Please try again. Feb-03-2021 Wednesday PST 15:29:28 
+
+[DEBUG]    [com.revature.ui.login.ClientLogin]    
+Client [age=0, bankAccountNum=0, firstName=null, gender=null, id=0, lastName=null, password=HailSanta, username=xStaples] Feb-03-2021 Wednesday PST 15:29:39 
+
+[DEBUG]    [com.revature.ui.login.ClientLogin]    
+true Feb-03-2021 Wednesday PST 15:29:39 
+
+[INFO]    [com.revature.ui.login.ClientLogin]    
+Success Feb-03-2021 Wednesday PST 15:29:39 
+
+[DEBUG]    [com.revature.ui.login.ClientLogin]    
+Client [age=0, bankAccountNum=0, firstName=null, gender=null, id=0, lastName=null, password=HailSanta, username=xStaples] Feb-03-2021 Wednesday PST 15:32:49 
+
+[DEBUG]    [com.revature.ui.login.ClientLogin]    
+true Feb-03-2021 Wednesday PST 15:32:49 
+
+[INFO]    [com.revature.ui.client.ClientMenu]    
+No valid choice entered, please try again Feb-03-2021 Wednesday PST 15:34:13 
+
+[INFO]    [com.revature.ui.login.Login]    
+Invalid selection. Please try again. Feb-03-2021 Wednesday PST 15:34:18 
+
