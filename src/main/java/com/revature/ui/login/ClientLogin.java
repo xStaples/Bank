@@ -19,15 +19,15 @@ public class ClientLogin implements Menu {
         cs = new ClientServices();
     }
 
+
+//interfaces for bank transactions 
     @Override
     public void display() {
         Client loginInfo = getLoginInput();
     
         loginVerification = cs.getLoginVerification(loginInfo);
-        log.debug(loginInfo);
-        log.debug(loginVerification);
         if (loginVerification) {
-            Menu clientMenu = new ClientMenu();
+            Menu clientMenu = new ClientMenu(loginInfo);
             clientMenu.display();
         } else {
             log.info("Username or Password invalid");

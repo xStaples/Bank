@@ -22,7 +22,7 @@ public class ClientServices {
 
     public int createClient(Client client) {
         int count = 0;
-        try (Connection connection = ConnectionUtil.getConnection()){
+        try (Connection connection = ConnectionUtil.getConnection()) {
             connection.setAutoCommit(false);
             count = clientDao.createClient(client);
             connection.commit();
@@ -32,13 +32,15 @@ public class ClientServices {
         return count;
     }
 
-    public boolean getLoginVerification(Client client){
+    public boolean getLoginVerification(Client client) {
         return clientDao.getLoginVerification(client);
     }
-    
 
+    public Client getAccountInfo(Client client) {
+        return clientDao.getAccountInfo(client);
+    }
 
-    public Client checkBalances(String username, int accountId){
+    public Client checkBalances(String username, int accountId) {
         return null;
     }
 }

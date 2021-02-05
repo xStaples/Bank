@@ -8,7 +8,7 @@ public class Client {
     private String gender;
     private String username;
     private String password;
-    private int bankAccountNum;
+    private int accountId;
 
     public Client() {
     }
@@ -28,7 +28,7 @@ public class Client {
     }
 
     public Client(int id, String firstName, String lastName, int age, String gender, String username, String password,
-            int bankAccountNum) {
+            int accountId) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -36,7 +36,7 @@ public class Client {
         this.gender = gender;
         this.username = username;
         this.password = password;
-        this.bankAccountNum = bankAccountNum;
+        this.accountId = accountId;
     }
 
     public int getId() {
@@ -96,11 +96,11 @@ public class Client {
     }
 
     public int getBankAccountNum() {
-        return bankAccountNum;
+        return accountId;
     }
 
-    public void setBankAccountNum(int bankAccountNum) {
-        this.bankAccountNum = bankAccountNum;
+    public void setBankAccountNum(int accountId) {
+        this.accountId = accountId;
     }
 
     @Override
@@ -108,7 +108,7 @@ public class Client {
         final int prime = 31;
         int result = 1;
         result = prime * result + age;
-        result = prime * result + bankAccountNum;
+        result = prime * result + accountId;
         result = prime * result + ((firstName == null) ? 0 : firstName.hashCode());
         result = prime * result + ((gender == null) ? 0 : gender.hashCode());
         result = prime * result + id;
@@ -129,7 +129,7 @@ public class Client {
         Client other = (Client) obj;
         if (age != other.age)
             return false;
-        if (bankAccountNum != other.bankAccountNum)
+        if (accountId != other.accountId)
             return false;
         if (firstName == null) {
             if (other.firstName != null)
@@ -163,7 +163,7 @@ public class Client {
 
     @Override
     public String toString() {
-        return "Client [age=" + age + ", bankAccountNum=" + bankAccountNum + ", firstName=" + firstName + ", gender="
+        return "Client [age=" + age + ", accountId=" + accountId + ", firstName=" + firstName + ", gender="
                 + gender + ", id=" + id + ", lastName=" + lastName + ", password=" + password + ", username=" + username
                 + "]";
     }

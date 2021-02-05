@@ -13,6 +13,7 @@ import org.apache.log4j.Logger;
 
 public class ClientDaoImpl implements ClientDao {
     private static Logger log = Logger.getLogger(ClientDaoImpl.class);
+
     @Override
     public int createClient(Client client) throws DatabaseConnectionException {
         int createCount = 0;
@@ -37,32 +38,62 @@ public class ClientDaoImpl implements ClientDao {
     }
 
     @Override
-    public boolean getLoginVerification(Client client){
-        
+    public boolean getLoginVerification(Client client) {
+
         Client clientCheck = null;
 
-        try (Connection connection = ConnectionUtil.getConnection()){
+        try (Connection connection = ConnectionUtil.getConnection()) {
             String sql = "SELECT client_username, password FROM bank.clients WHERE client_username = ?";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, client.getUsername());
             ResultSet rs = preparedStatement.executeQuery();
 
-            if(rs.next()){
+            if (rs.next()) {
                 String clientUsername = rs.getString("client_username");
                 String clientPassword = rs.getString("password");
 
                 clientCheck = new Client(clientUsername, clientPassword);
-                
+
             }
-            
+
         } catch (SQLException | DatabaseConnectionException e) {
             log.debug(e.getMessage());
         }
-        
-        
-        
+
         return (client.equals(clientCheck));
     }
+
+
+    public Client getAccountInfo(Client client){
+        Client clientInfo = null;
+        try (Connection connection = ConnectionUtil.getConnection()) {
+            String sql = "SELECT * FROM bank.clients WHERE client_username = ?";
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1, client.getUsername());
+            ResultSet rs = preparedStatement.executeQuery();
+
+            if (rs.next()) {
+                int id = rs.getInt("id");
+                String firstName = rs.getString("first_name");
+                String lastName = rs.getString("last_name");
+                int age = rs.getInt("client_age");
+                String gender = rs.getString("client_gender");
+                String username = rs.getString("client_username");
+                String password = rs.getString("password");
+                int accountId = rs.getInt("account_id");
+
+                clientInfo = new Client(id, firstName, lastName, age, gender, username, password, accountId);
+                client = clientInfo;
+            } else {
+                log.debug("No user found with that information");
+            }
+        } catch (Exception e) {
+            //TODO: handle exception
+        }
+        return client;
+    }
+
+
     @Override
     public Client applyAccount(int newBalance, String accountName) {
         // TODO Auto-generated method stub
