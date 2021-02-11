@@ -27,9 +27,6 @@ public class BankDaoImpl implements BankDao {
 
             updatedBalance = preparedStatement.executeUpdate();
 
-            if (updatedBalance == 1) {
-                log.info("Withdraw Successful");
-            }
 
         } catch (SQLException | DatabaseConnectionException e) {
             log.debug(e.getMessage());

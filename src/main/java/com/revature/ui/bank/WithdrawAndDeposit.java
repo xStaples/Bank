@@ -42,13 +42,13 @@ public class WithdrawAndDeposit implements Menu {
                     log.info("How much would you like to withdraw?");
                     double withdrawAmount = amountInput();
                     int accountWithdraw = bankServices.accountWithdraw(clientInfo, withdrawAmount);
-                    log.info(accountWithdraw + " case 1 -- WAD");
+
                     break;
                 case 2:
                     log.info("How much would you like to deposit?");
                     double depositAmount = amountInput();
                     int accountDeposit = bankServices.accountDeposit(clientInfo, depositAmount);
-                    log.info(accountDeposit + " case 2 -- wad");
+
                     break;
                 default:
                     break;
