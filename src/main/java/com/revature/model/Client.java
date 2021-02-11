@@ -8,14 +8,29 @@ public class Client {
     private String gender;
     private String username;
     private String password;
+    private int accountNumber;
+    private String accountType;
+    private double accountBalance;
     private int accountId;
 
     public Client() {
     }
 
+    public Client(String username) {
+        this.username = username;
+    }
+
     public Client(String username, String password) {
         this.username = username;
         this.password = password;
+    }
+
+    public Client(String firstName, String lastName, int age, String gender, String username) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        this.gender = gender;
+        this.username = username;
     }
 
     public Client(String firstName, String lastName, int age, String gender, String username, String password) {
@@ -27,8 +42,7 @@ public class Client {
         this.password = password;
     }
 
-    public Client(int id, String firstName, String lastName, int age, String gender, String username, String password,
-            int accountId) {
+    public Client(int id, String firstName, String lastName, int age, String gender, String username, String password) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -36,6 +50,20 @@ public class Client {
         this.gender = gender;
         this.username = username;
         this.password = password;
+    }
+
+
+    public Client(int id, String firstName, String lastName, int age, String gender, String username,
+            int accountNumber, String accountType, double accountBalance, int accountId) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        this.gender = gender;
+        this.username = username;
+        this.accountNumber = accountNumber;
+        this.accountType = accountType;
+        this.accountBalance = accountBalance;
         this.accountId = accountId;
     }
 
@@ -95,11 +123,35 @@ public class Client {
         this.password = password;
     }
 
-    public int getBankAccountNum() {
+    public int getAccountNumber() {
+        return accountNumber;
+    }
+
+    public void setAccountNumber(int accountNumber) {
+        this.accountNumber = accountNumber;
+    }
+
+    public String getAccountType() {
+        return accountType;
+    }
+
+    public void setAccountType(String accountType) {
+        this.accountType = accountType;
+    }
+
+    public double getAccountBalance() {
+        return accountBalance;
+    }
+
+    public void setAccountBalance(double accountBalance) {
+        this.accountBalance = accountBalance;
+    }
+
+    public int getAccountId() {
         return accountId;
     }
 
-    public void setBankAccountNum(int accountId) {
+    public void setAccountId(int accountId) {
         this.accountId = accountId;
     }
 
@@ -107,8 +159,13 @@ public class Client {
     public int hashCode() {
         final int prime = 31;
         int result = 1;
-        result = prime * result + age;
+        long temp;
+        temp = Double.doubleToLongBits(accountBalance);
+        result = prime * result + (int) (temp ^ (temp >>> 32));
         result = prime * result + accountId;
+        result = prime * result + accountNumber;
+        result = prime * result + ((accountType == null) ? 0 : accountType.hashCode());
+        result = prime * result + age;
         result = prime * result + ((firstName == null) ? 0 : firstName.hashCode());
         result = prime * result + ((gender == null) ? 0 : gender.hashCode());
         result = prime * result + id;
@@ -127,9 +184,18 @@ public class Client {
         if (getClass() != obj.getClass())
             return false;
         Client other = (Client) obj;
-        if (age != other.age)
+        if (Double.doubleToLongBits(accountBalance) != Double.doubleToLongBits(other.accountBalance))
             return false;
         if (accountId != other.accountId)
+            return false;
+        if (accountNumber != other.accountNumber)
+            return false;
+        if (accountType == null) {
+            if (other.accountType != null)
+                return false;
+        } else if (!accountType.equals(other.accountType))
+            return false;
+        if (age != other.age)
             return false;
         if (firstName == null) {
             if (other.firstName != null)
@@ -163,9 +229,10 @@ public class Client {
 
     @Override
     public String toString() {
-        return "Client [age=" + age + ", accountId=" + accountId + ", firstName=" + firstName + ", gender="
-                + gender + ", id=" + id + ", lastName=" + lastName + ", password=" + password + ", username=" + username
-                + "]";
+        return "Client [accountBalance=" + accountBalance + ", accountId=" + accountId + ", accountNumber="
+                + accountNumber + ", accountType=" + accountType + ", age=" + age + ", firstName=" + firstName
+                + ", gender=" + gender + ", id=" + id + ", lastName=" + lastName + ", password= ********" 
+                + ", username=" + username + "]";
     }
 
 }

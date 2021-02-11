@@ -4,22 +4,19 @@ import com.revature.model.BankAccount;
 import com.revature.model.Client;
 import com.revature.services.bankServices.BankServices;
 import com.revature.services.clientServices.ClientServices;
-import com.revature.ui.bank.ApplicationMenu;
+import com.revature.ui.bank.WithdrawAndDeposit;
 import com.revature.ui.menu.Menu;
 
 import org.apache.log4j.Logger;
 
-
-
-public class ClientMenu implements Menu{
+public class ClientMenu implements Menu {
 
     private static Logger log = Logger.getLogger(ClientMenu.class);
     private Client client = null;
     public ClientServices clientServices;
     public BankServices bankServices;
-    
 
-    public ClientMenu(Client client){
+    public ClientMenu(Client client) {
         super();
         this.client = client;
         clientServices = new ClientServices();
@@ -29,7 +26,7 @@ public class ClientMenu implements Menu{
     @Override
     public void display() {
         int choice = 0;
-        Client clientInfo = clientServices.getAccountInfo(client);
+        Client clientInfo = bankServices.getClientInfo(client);
         log.debug(clientInfo);
         do {
             System.out.println();
@@ -51,22 +48,32 @@ public class ClientMenu implements Menu{
 
             switch (choice) {
                 case 1:
-                    
+                    Menu clientAccountBalances = new ClientBalancesMenu(clientInfo);
+                    clientAccountBalances.display();
                     break;
-            
+
                 case 2:
-                    BankAccount accountAppl = getApplicationInput();
-                    Menu applMenu = new ApplicationMenu(accountAppl);
-                    applMenu.display();
+                    BankAccount application = getApplicationInput();
+                    bankServices.submitApplicationInput(application);
+                    break;
+                
+                case 3:
+                    Menu withdrawAndDepositMenu = new WithdrawAndDeposit(clientInfo);
+                    withdrawAndDepositMenu.display();
+                    break;
+
+                case 4:
+                    Menu transferMoneyMenu = new TransferMoneyMenu(clientInfo);
+                    transferMoneyMenu.display();
                     break;
                 default:
                     break;
             }
         } while (choice != 9);
     }
-    
 
-    public BankAccount getApplicationInput(){
+
+    public BankAccount getApplicationInput() {
         BankAccount accountInfo = null;
         int choice = 0;
         String accountType;
@@ -82,28 +89,40 @@ public class ClientMenu implements Menu{
             try {
                 choice = Integer.parseInt(userInput.nextLine());
             } catch (Exception e) {
-                //TODO: handle exception
+
             }
             switch (choice) {
                 case 1:
-                    accountType = "Checking Account";
+                    System.out.println();
+                    log.info("  Let's set up your new Checking Account! ");
+                    accountType = "Checking";
                     accountOwner = client.getUsername();
+                    log.info("Please add funds to your new checking account: ");
                     accountBalance = Double.parseDouble(userInput.nextLine());
                     accountInfo = new BankAccount(accountType, accountOwner, accountBalance);
-                    log.debug(accountInfo);
+
+                    if (accountInfo != null) {
+                        log.info("Your Account has been submitted. Please wait while someone reviews your account!");
+                        log.info("Thank you for your application!");
+                    }
+
                     break;
                 case 2:
-                    accountType = "Savings Account";
+                    System.out.println();
+                    log.info("  Let's set up your new Savings Account! ");
+                    accountType = "Savings";
                     accountOwner = client.getUsername();
+                    log.info("Please add funds to your new checking account: ");
                     accountBalance = Double.parseDouble(userInput.nextLine());
                     accountInfo = new BankAccount(accountType, accountOwner, accountBalance);
-                    log.debug(accountInfo);
-                    break;
-                default:
+
+                    if (accountInfo != null) {
+                        log.info("Your Account has been submitted. Please wait while someone reviews your account!");
+                        log.info("Thank you for your application!");
+                    }
                     break;
             }
         } while (choice != 9);
-        System.out.println("Thank You For Your Application");
 
         return accountInfo;
     }

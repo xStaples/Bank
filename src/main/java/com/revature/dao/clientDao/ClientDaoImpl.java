@@ -4,8 +4,11 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.revature.exceptions.DatabaseConnectionException;
+import com.revature.model.BankAccount;
 import com.revature.model.Client;
 import com.revature.util.ConnectionUtil;
 
@@ -80,9 +83,9 @@ public class ClientDaoImpl implements ClientDao {
                 String gender = rs.getString("client_gender");
                 String username = rs.getString("client_username");
                 String password = rs.getString("password");
-                int accountId = rs.getInt("account_id");
+                
 
-                clientInfo = new Client(id, firstName, lastName, age, gender, username, password, accountId);
+                clientInfo = new Client(id, firstName, lastName, age, gender, username, password);
                 client = clientInfo;
             } else {
                 log.debug("No user found with that information");
@@ -95,27 +98,37 @@ public class ClientDaoImpl implements ClientDao {
 
 
     @Override
-    public Client applyAccount(int newBalance, String accountName) {
-        // TODO Auto-generated method stub
-        return null;
-    }
+    public List<BankAccount> checkBalance(Client client) {
+        List<BankAccount> clientAccounts = new ArrayList<>();
 
-    @Override
-    public Client checkBalance(String username, int accountId) {
-        // TODO Auto-generated method stub
-        return null;
-    }
+        try (Connection connection = ConnectionUtil.getConnection()) {
+            String sql = "SELECT * FROM bank.bankAccounts WHERE account_owner = ?";
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1, client.getUsername());
+            ResultSet rs = preparedStatement.executeQuery();
+            
+            if (rs.next()) {
+                do {
+                    String accountOwner = rs.getString("account_owner");
+                    int accountNumber = rs.getInt("account_number");
+                    String accountType = rs.getString("account_type");
+                    double accountBalance = rs.getDouble("account_balance");
 
-    @Override
-    public Client makeDeposit(String accountName, int depositAmount) {
-        // TODO Auto-generated method stub
-        return null;
-    }
 
-    @Override
-    public Client makeWithdraw(String accountName, int withdrawAmount) {
-        // TODO Auto-generated method stub
-        return null;
+                    BankAccount clientAccount = new BankAccount (accountNumber, accountType, accountOwner, accountBalance);
+                    clientAccounts.add(clientAccount);
+                } while (rs.next());
+                
+                log.debug(clientAccounts+" EDAO");
+            } else {
+                log.info("No Clients Found");
+            }
+        } catch (Exception e) {
+            log.info("Error connecting to database.");
+            log.debug(e.getMessage());
+        }
+
+        return clientAccounts;
     }
 
 }

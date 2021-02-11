@@ -72,6 +72,7 @@ public class MainMenu implements Menu{
             String password = Menu.userInput.nextLine();
 
             client = new Client(firstName, lastName, age, gender, username, password);
+
             return client;
         }
         

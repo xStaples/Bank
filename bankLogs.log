@@ -1,6 +1,12 @@
 [DEBUG]    [com.revature.ui.client.ClientMenu]    
-Client [age=18, accountId=0, firstName=Dalton, gender=Male, id=2, lastName=Spencer, password=HailSanta, username=xStaples] Feb-04-2021 Thursday PST 15:26:53 
+Client [accountBalance=13700.0, accountId=3, accountNumber=1132, accountType=Savings, age=18, firstName=Dalton, gender=Duder, id=1, lastName=Spencer, password= ********, username=Staples] Feb-11-2021 Thursday PST 06:39:56 
 
-[DEBUG]    [com.revature.ui.client.ClientMenu]    
-BankAccount [accountBalance=500.0, accountId=0, accountNum=0, accountOwner=xStaples, accountType=Checking Account] Feb-04-2021 Thursday PST 15:27:08 
+[INFO]    [com.revature.ui.client.ClientBalancesMenu]    
+ === Account Balances ===  Feb-11-2021 Thursday PST 06:39:58 
+
+[INFO]    [com.revature.ui.client.ClientBalancesMenu]    
+========================== Feb-11-2021 Thursday PST 06:39:58 
+
+[DEBUG]    [com.revature.dao.clientDao.ClientDaoImpl]    
+[BankAccount [accountBalance=13700.0, accountId=0, accountNum=1132, accountOwner=Staples, accountType=Savings], BankAccount [accountBalance=13700.0, accountId=0, accountNum=68023, accountOwner=Staples, accountType=Checking]] EDAO Feb-11-2021 Thursday PST 06:39:58 
 

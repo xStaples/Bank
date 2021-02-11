@@ -3,10 +3,13 @@ package com.revature.services.clientServices;
 import java.sql.Connection;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.revature.dao.clientDao.ClientDao;
 import com.revature.dao.clientDao.ClientDaoImpl;
 import com.revature.exceptions.DatabaseConnectionException;
+import com.revature.model.BankAccount;
 import com.revature.model.Client;
 import com.revature.util.ConnectionUtil;
 
@@ -33,14 +36,28 @@ public class ClientServices {
     }
 
     public boolean getLoginVerification(Client client) {
-        return clientDao.getLoginVerification(client);
+        boolean verified = false;
+        try {
+            verified = clientDao.getLoginVerification(client);
+        } catch (DatabaseConnectionException e) {
+            e.printStackTrace();
+        }
+        return verified;
     }
 
     public Client getAccountInfo(Client client) {
         return clientDao.getAccountInfo(client);
     }
 
-    public Client checkBalances(String username, int accountId) {
-        return null;
+    public List<BankAccount> checkBalances(Client client) {
+        List<BankAccount> clientAccounts = new ArrayList<>();
+
+        try {
+            clientAccounts = clientDao.checkBalance(client);
+
+        } catch (DatabaseConnectionException e) {
+            log.info("Error connecting to database.");
+        }
+        return clientAccounts;
     }
 }

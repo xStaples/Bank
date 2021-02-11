@@ -5,7 +5,9 @@ import com.revature.model.BankAccount;
 import com.revature.model.Client;
 
 public interface BankDao {
-    public int createBankAccount(BankAccount bankAccount, Client client) throws DatabaseConnectionException;
-    public BankAccount transferMoney(Client sender, Client receiver);
-    public int accountWithdraw(Client client, String accountType, int withdrawAmount);
+    public int accountWithdraw(Client client, double withdrawAmount) throws DatabaseConnectionException;
+    public int submitClientAccountApp(BankAccount accountApp);
+    public Client getClientInfo(Client client) throws DatabaseConnectionException;
+    public int accountDeposit(Client client, double withdrawAmount) throws DatabaseConnectionException;
+    public int transferFunds(Client sendUser, Client receiveUser, double transferAmount) throws DatabaseConnectionException;
 }

@@ -8,10 +8,14 @@ public class BankAccount {
     private double accountBalance;
 
     public BankAccount() {
-        super();
+
     }
 
-    public BankAccount(String accountType, String accountOwner, double accountBalance){
+    public BankAccount(int accountNum) {
+        this.accountNum = accountNum;
+    }
+
+    public BankAccount(String accountType, String accountOwner, double accountBalance) {
         this.accountType = accountType;
         this.accountOwner = accountOwner;
         this.accountBalance = accountBalance;

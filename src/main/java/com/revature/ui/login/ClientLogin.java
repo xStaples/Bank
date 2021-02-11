@@ -1,7 +1,5 @@
 package com.revature.ui.login;
 
-
-
 import com.revature.model.Client;
 import com.revature.services.clientServices.ClientServices;
 import com.revature.ui.client.ClientMenu;
@@ -15,27 +13,28 @@ public class ClientLogin implements Menu {
 
     ClientServices cs;
 
-    public ClientLogin(){
+    public ClientLogin() {
         cs = new ClientServices();
     }
 
-
-//interfaces for bank transactions 
+    // interfaces for bank transactions
     @Override
     public void display() {
         Client loginInfo = getLoginInput();
-    
+
         loginVerification = cs.getLoginVerification(loginInfo);
         if (loginVerification) {
             Menu clientMenu = new ClientMenu(loginInfo);
             clientMenu.display();
         } else {
-            log.info("Username or Password invalid");
+            log.info("Invalid Username or Password. Please Try again");
+            log.debug("Invalid Username/Password -- Username: " + loginInfo.getUsername() + "-- Password: "
+                    + loginInfo.getPassword());
         }
-        
+
     }
-    
-    public Client getLoginInput(){
+
+    public Client getLoginInput() {
         System.out.println("Enter Username: ");
         String usernameInput = userInput.nextLine();
         System.out.println("Enter Password: ");
