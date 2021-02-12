@@ -115,7 +115,7 @@ public class EmployeeDaoImpl implements EmployeeDao {
 
     @Override
     public Client getClientById(int id) throws DatabaseConnectionException {
-        // TODO Auto-generated method stub
+
         return null;
     }
 

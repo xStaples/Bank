@@ -71,6 +71,7 @@ public class WithdrawAndDeposit implements Menu {
             log.info("Input cannot be negative.");
             amount = 0;
         }
+        
         return amount;
     }
 }

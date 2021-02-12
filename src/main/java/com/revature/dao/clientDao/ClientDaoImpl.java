@@ -91,7 +91,7 @@ public class ClientDaoImpl implements ClientDao {
                 log.debug("No user found with that information");
             }
         } catch (Exception e) {
-            //TODO: handle exception
+
         }
         return client;
     }

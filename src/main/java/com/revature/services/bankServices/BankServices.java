@@ -77,7 +77,7 @@ public class BankServices {
         try(Connection connection = ConnectionUtil.getConnection()) {
             
         } catch (Exception e) {
-            //TODO: handle exception
+
         }
         return count;
     }

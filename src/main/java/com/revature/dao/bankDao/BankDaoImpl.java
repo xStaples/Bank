@@ -19,45 +19,52 @@ public class BankDaoImpl implements BankDao {
     public int accountWithdraw(Client client, double withdrawAmount) {
 
         int updatedBalance = 0;
-        try (Connection connection = ConnectionUtil.getConnection()) {
-            String sql = "UPDATE bank.bankAccounts SET account_balance = ? WHERE account_owner = ?";
-            PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setDouble(1, client.getAccountBalance() - withdrawAmount);
-            preparedStatement.setString(2, client.getUsername());
 
-            updatedBalance = preparedStatement.executeUpdate();
+        if (withdrawAmount <= 0) {
+            log.info("Invalid Withdraw Amount. Please try again.");
 
+        } else {
+            try (Connection connection = ConnectionUtil.getConnection()) {
+                String sql = "UPDATE bank.bankAccounts SET account_balance = ? WHERE account_owner = ?";
+                PreparedStatement preparedStatement = connection.prepareStatement(sql);
+                preparedStatement.setDouble(1, client.getAccountBalance() - withdrawAmount);
+                preparedStatement.setString(2, client.getUsername());
 
-        } catch (SQLException | DatabaseConnectionException e) {
-            log.debug(e.getMessage());
+                updatedBalance = preparedStatement.executeUpdate();
+
+            } catch (SQLException | DatabaseConnectionException e) {
+                log.debug(e.getMessage());
+            }
         }
-
         return updatedBalance;
     }
 
     @Override
     public int accountDeposit(Client client, double depositAmount) {
-
         int updatedBalance = 0;
-        double deposit = client.getAccountBalance() + depositAmount;
-        log.debug(deposit + " accountDeposit ln 52");
+        if (depositAmount <= 0) {
+            log.info("Invalid Deposit Amount. Please try again.");
 
-        try (Connection connection = ConnectionUtil.getConnection()) {
-            String sql = "UPDATE bank.bankAccounts SET account_balance = ? WHERE account_owner = ?";
-            PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setDouble(1, deposit);
-            preparedStatement.setString(2, client.getUsername());
+        } else {
 
-            updatedBalance = preparedStatement.executeUpdate();
+            double deposit = client.getAccountBalance() + depositAmount;
 
-            if (updatedBalance == 1) {
-                log.info("Deposit Successful");
+            log.debug(deposit + " accountDeposit ln 52");
+
+            try (Connection connection = ConnectionUtil.getConnection()) {
+                String sql = "UPDATE bank.bankAccounts SET account_balance = ? WHERE account_owner = ?";
+                PreparedStatement preparedStatement = connection.prepareStatement(sql);
+                preparedStatement.setDouble(1, deposit);
+                preparedStatement.setString(2, client.getUsername());
+
+                updatedBalance = preparedStatement.executeUpdate();
+
+            } catch (SQLException | DatabaseConnectionException e) {
+                log.debug(e.getMessage());
             }
 
-        } catch (SQLException | DatabaseConnectionException e) {
-            log.debug(e.getMessage());
+            // return updatedBalance;
         }
-
         return updatedBalance;
     }
 

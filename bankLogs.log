@@ -1,0 +1,393 @@
+[INFO]    [com.revature.ui.login.ClientLogin]    
+Invalid Username or Password. Please Try again Feb-11-2021 Thursday PST 08:25:49 
+
+[DEBUG]    [com.revature.ui.login.ClientLogin]    
+Invalid Username/Password -- Username: deltron-- Password: sdfasdf Feb-11-2021 Thursday PST 08:25:49 
+
+[DEBUG]    [com.revature.ui.client.ClientMenu]    
+Client [accountBalance=0.0, accountId=0, accountNumber=0, accountType=null, age=25, firstName=Dalton, gender=male, id=2, lastName=Spencer, password= ********, username=deltron] Feb-11-2021 Thursday PST 08:25:59 
+
+[INFO]    [com.revature.ui.client.ClientMenu]    
+  Let's set up your new Checking Account!  Feb-11-2021 Thursday PST 08:26:09 
+
+[INFO]    [com.revature.ui.client.ClientMenu]    
+Please add funds to your new checking account:  Feb-11-2021 Thursday PST 08:26:09 
+
+[INFO]    [com.revature.ui.client.ClientMenu]    
+Your Account has been submitted. Please wait while someone reviews your account! Feb-11-2021 Thursday PST 08:26:14 
+
+[INFO]    [com.revature.ui.client.ClientMenu]    
+Thank you for your application! Feb-11-2021 Thursday PST 08:26:14 
+
+[INFO]    [com.revature.ui.employee.PendingApplicationMenu]    
+[BankAccount [accountBalance=500.0, accountId=0, accountNum=15409, accountOwner=deltron, accountType=Checking]] Feb-11-2021 Thursday PST 08:26:33 
+
+[INFO]    [com.revature.ui.employee.PendingApplicationMenu]    
+Enter Account Number Feb-11-2021 Thursday PST 08:26:44 
+
+[DEBUG]    [com.revature.dao.employeeDao.EmployeeDaoImpl]    
+BankAccount [accountBalance=0.0, accountId=0, accountNum=15409, accountOwner=null, accountType=null] top check before connection Feb-11-2021 Thursday PST 08:26:48 
+
+[DEBUG]    [com.revature.dao.employeeDao.EmployeeDaoImpl]    
+BankAccount [accountBalance=500.0, accountId=0, accountNum=15409, accountOwner=deltron, accountType=Checking] EDAO--gai Feb-11-2021 Thursday PST 08:26:48 
+
+[DEBUG]    [com.revature.services.employeeServices.EmployeeServices]    
+ES--gai--BankAccount [accountBalance=500.0, accountId=0, accountNum=15409, accountOwner=deltron, accountType=Checking] Feb-11-2021 Thursday PST 08:26:48 
+
+[DEBUG]    [com.revature.services.employeeServices.EmployeeServices]    
+Client [accountBalance=500.0, accountId=2, accountNumber=15409, accountType=Checking, age=25, firstName=Dalton, gender=male, id=2, lastName=Spencer, password= ********, username=deltron]ES -- gcbun Feb-11-2021 Thursday PST 08:27:09 
+
+[INFO]    [com.revature.ui.employee.ClientSearchMenu]    
+Client [accountBalance=500.0, accountId=2, accountNumber=15409, accountType=Checking, age=25, firstName=Dalton, gender=male, id=2, lastName=Spencer, password= ********, username=deltron] Feb-11-2021 Thursday PST 08:27:09 
+
+[DEBUG]    [com.revature.ui.employee.ClientSearchMenu]    
+Results: Client [accountBalance=500.0, accountId=2, accountNumber=15409, accountType=Checking, age=25, firstName=Dalton, gender=male, id=2, lastName=Spencer, password= ********, username=deltron] Feb-11-2021 Thursday PST 08:27:09 
+
+[DEBUG]    [com.revature.ui.client.ClientMenu]    
+Client [accountBalance=500.0, accountId=2, accountNumber=15409, accountType=Checking, age=25, firstName=Dalton, gender=male, id=2, lastName=Spencer, password= ********, username=deltron] Feb-11-2021 Thursday PST 08:27:27 
+
+[DEBUG]    [com.revature.ui.bank.WithdrawAndDeposit]    
+Client [accountBalance=500.0, accountId=2, accountNumber=15409, accountType=Checking, age=25, firstName=Dalton, gender=male, id=2, lastName=Spencer, password= ********, username=deltron]WithdrawDeposit Menu Feb-11-2021 Thursday PST 08:27:30 
+
+[INFO]    [com.revature.ui.bank.WithdrawAndDeposit]    
+ === Withdraw and Deposit ===  Feb-11-2021 Thursday PST 08:27:30 
+
+[INFO]    [com.revature.ui.bank.WithdrawAndDeposit]    
+================================ Feb-11-2021 Thursday PST 08:27:30 
+
+[INFO]    [com.revature.ui.bank.WithdrawAndDeposit]    
+What would you like to do? Feb-11-2021 Thursday PST 08:27:30 
+
+[INFO]    [com.revature.ui.bank.WithdrawAndDeposit]    
+1. Withdraw Money Feb-11-2021 Thursday PST 08:27:30 
+
+[INFO]    [com.revature.ui.bank.WithdrawAndDeposit]    
+2. Deposit Money Feb-11-2021 Thursday PST 08:27:30 
+
+[INFO]    [com.revature.ui.bank.WithdrawAndDeposit]    
+3. Back Feb-11-2021 Thursday PST 08:27:30 
+
+[INFO]    [com.revature.ui.bank.WithdrawAndDeposit]    
+How much would you like to withdraw? Feb-11-2021 Thursday PST 08:27:32 
+
+[INFO]    [com.revature.ui.bank.WithdrawAndDeposit]    
+ === Withdraw and Deposit ===  Feb-11-2021 Thursday PST 08:27:35 
+
+[INFO]    [com.revature.ui.bank.WithdrawAndDeposit]    
+================================ Feb-11-2021 Thursday PST 08:27:35 
+
+[INFO]    [com.revature.ui.bank.WithdrawAndDeposit]    
+What would you like to do? Feb-11-2021 Thursday PST 08:27:35 
+
+[INFO]    [com.revature.ui.bank.WithdrawAndDeposit]    
+1. Withdraw Money Feb-11-2021 Thursday PST 08:27:35 
+
+[INFO]    [com.revature.ui.bank.WithdrawAndDeposit]    
+2. Deposit Money Feb-11-2021 Thursday PST 08:27:35 
+
+[INFO]    [com.revature.ui.bank.WithdrawAndDeposit]    
+3. Back Feb-11-2021 Thursday PST 08:27:35 
+
+[INFO]    [com.revature.ui.client.ClientBalancesMenu]    
+ === Account Balances ===  Feb-11-2021 Thursday PST 08:27:40 
+
+[INFO]    [com.revature.ui.client.ClientBalancesMenu]    
+========================== Feb-11-2021 Thursday PST 08:27:40 
+
+[DEBUG]    [com.revature.dao.clientDao.ClientDaoImpl]    
+[BankAccount [accountBalance=400.0, accountId=0, accountNum=15409, accountOwner=deltron, accountType=Checking]] EDAO Feb-11-2021 Thursday PST 08:27:41 
+
+[INFO]    [com.revature.ui.client.ClientBalancesMenu]    
+BankAccount [accountBalance=400.0, accountId=0, accountNum=15409, accountOwner=deltron, accountType=Checking] Feb-11-2021 Thursday PST 08:27:41 
+
+[DEBUG]    [com.revature.ui.bank.WithdrawAndDeposit]    
+Client [accountBalance=500.0, accountId=2, accountNumber=15409, accountType=Checking, age=25, firstName=Dalton, gender=male, id=2, lastName=Spencer, password= ********, username=deltron]WithdrawDeposit Menu Feb-11-2021 Thursday PST 08:27:49 
+
+[INFO]    [com.revature.ui.bank.WithdrawAndDeposit]    
+ === Withdraw and Deposit ===  Feb-11-2021 Thursday PST 08:27:49 
+
+[INFO]    [com.revature.ui.bank.WithdrawAndDeposit]    
+================================ Feb-11-2021 Thursday PST 08:27:49 
+
+[INFO]    [com.revature.ui.bank.WithdrawAndDeposit]    
+What would you like to do? Feb-11-2021 Thursday PST 08:27:49 
+
+[INFO]    [com.revature.ui.bank.WithdrawAndDeposit]    
+1. Withdraw Money Feb-11-2021 Thursday PST 08:27:49 
+
+[INFO]    [com.revature.ui.bank.WithdrawAndDeposit]    
+2. Deposit Money Feb-11-2021 Thursday PST 08:27:49 
+
+[INFO]    [com.revature.ui.bank.WithdrawAndDeposit]    
+3. Back Feb-11-2021 Thursday PST 08:27:49 
+
+[INFO]    [com.revature.ui.bank.WithdrawAndDeposit]    
+How much would you like to withdraw? Feb-11-2021 Thursday PST 08:27:50 
+
+[INFO]    [com.revature.ui.bank.WithdrawAndDeposit]    
+Input cannot be negative. Feb-11-2021 Thursday PST 08:27:53 
+
+[INFO]    [com.revature.ui.bank.WithdrawAndDeposit]    
+ === Withdraw and Deposit ===  Feb-11-2021 Thursday PST 08:27:53 
+
+[INFO]    [com.revature.ui.bank.WithdrawAndDeposit]    
+================================ Feb-11-2021 Thursday PST 08:27:53 
+
+[INFO]    [com.revature.ui.bank.WithdrawAndDeposit]    
+What would you like to do? Feb-11-2021 Thursday PST 08:27:53 
+
+[INFO]    [com.revature.ui.bank.WithdrawAndDeposit]    
+1. Withdraw Money Feb-11-2021 Thursday PST 08:27:53 
+
+[INFO]    [com.revature.ui.bank.WithdrawAndDeposit]    
+2. Deposit Money Feb-11-2021 Thursday PST 08:27:53 
+
+[INFO]    [com.revature.ui.bank.WithdrawAndDeposit]    
+3. Back Feb-11-2021 Thursday PST 08:27:53 
+
+[INFO]    [com.revature.ui.client.ClientBalancesMenu]    
+ === Account Balances ===  Feb-11-2021 Thursday PST 08:28:00 
+
+[INFO]    [com.revature.ui.client.ClientBalancesMenu]    
+========================== Feb-11-2021 Thursday PST 08:28:00 
+
+[DEBUG]    [com.revature.dao.clientDao.ClientDaoImpl]    
+[BankAccount [accountBalance=500.0, accountId=0, accountNum=15409, accountOwner=deltron, accountType=Checking]] EDAO Feb-11-2021 Thursday PST 08:28:00 
+
+[INFO]    [com.revature.ui.client.ClientBalancesMenu]    
+BankAccount [accountBalance=500.0, accountId=0, accountNum=15409, accountOwner=deltron, accountType=Checking] Feb-11-2021 Thursday PST 08:28:00 
+
+[DEBUG]    [com.revature.ui.bank.WithdrawAndDeposit]    
+Client [accountBalance=500.0, accountId=2, accountNumber=15409, accountType=Checking, age=25, firstName=Dalton, gender=male, id=2, lastName=Spencer, password= ********, username=deltron]WithdrawDeposit Menu Feb-11-2021 Thursday PST 08:28:18 
+
+[INFO]    [com.revature.ui.bank.WithdrawAndDeposit]    
+ === Withdraw and Deposit ===  Feb-11-2021 Thursday PST 08:28:18 
+
+[INFO]    [com.revature.ui.bank.WithdrawAndDeposit]    
+================================ Feb-11-2021 Thursday PST 08:28:18 
+
+[INFO]    [com.revature.ui.bank.WithdrawAndDeposit]    
+What would you like to do? Feb-11-2021 Thursday PST 08:28:18 
+
+[INFO]    [com.revature.ui.bank.WithdrawAndDeposit]    
+1. Withdraw Money Feb-11-2021 Thursday PST 08:28:18 
+
+[INFO]    [com.revature.ui.bank.WithdrawAndDeposit]    
+2. Deposit Money Feb-11-2021 Thursday PST 08:28:18 
+
+[INFO]    [com.revature.ui.bank.WithdrawAndDeposit]    
+3. Back Feb-11-2021 Thursday PST 08:28:18 
+
+[INFO]    [com.revature.ui.bank.WithdrawAndDeposit]    
+How much would you like to deposit? Feb-11-2021 Thursday PST 08:28:20 
+
+[DEBUG]    [com.revature.dao.bankDao.BankDaoImpl]    
+600.0 accountDeposit ln 52 Feb-11-2021 Thursday PST 08:28:22 
+
+[INFO]    [com.revature.ui.bank.WithdrawAndDeposit]    
+ === Withdraw and Deposit ===  Feb-11-2021 Thursday PST 08:28:22 
+
+[INFO]    [com.revature.ui.bank.WithdrawAndDeposit]    
+================================ Feb-11-2021 Thursday PST 08:28:22 
+
+[INFO]    [com.revature.ui.bank.WithdrawAndDeposit]    
+What would you like to do? Feb-11-2021 Thursday PST 08:28:22 
+
+[INFO]    [com.revature.ui.bank.WithdrawAndDeposit]    
+1. Withdraw Money Feb-11-2021 Thursday PST 08:28:22 
+
+[INFO]    [com.revature.ui.bank.WithdrawAndDeposit]    
+2. Deposit Money Feb-11-2021 Thursday PST 08:28:22 
+
+[INFO]    [com.revature.ui.bank.WithdrawAndDeposit]    
+3. Back Feb-11-2021 Thursday PST 08:28:22 
+
+[INFO]    [com.revature.ui.client.ClientBalancesMenu]    
+ === Account Balances ===  Feb-11-2021 Thursday PST 08:28:25 
+
+[INFO]    [com.revature.ui.client.ClientBalancesMenu]    
+========================== Feb-11-2021 Thursday PST 08:28:25 
+
+[DEBUG]    [com.revature.dao.clientDao.ClientDaoImpl]    
+[BankAccount [accountBalance=600.0, accountId=0, accountNum=15409, accountOwner=deltron, accountType=Checking]] EDAO Feb-11-2021 Thursday PST 08:28:25 
+
+[INFO]    [com.revature.ui.client.ClientBalancesMenu]    
+BankAccount [accountBalance=600.0, accountId=0, accountNum=15409, accountOwner=deltron, accountType=Checking] Feb-11-2021 Thursday PST 08:28:25 
+
+[INFO]    [com.revature.ui.client.TransferMoneyMenu]    
+ === Transfer Funds ===  Feb-11-2021 Thursday PST 08:28:38 
+
+[INFO]    [com.revature.ui.client.TransferMoneyMenu]    
+========================= Feb-11-2021 Thursday PST 08:28:38 
+
+[INFO]    [com.revature.ui.client.TransferMoneyMenu]    
+1. Send Money Feb-11-2021 Thursday PST 08:28:38 
+
+[INFO]    [com.revature.ui.client.TransferMoneyMenu]    
+2. Receive Money Feb-11-2021 Thursday PST 08:28:38 
+
+[INFO]    [com.revature.ui.client.TransferMoneyMenu]    
+3. Back Feb-11-2021 Thursday PST 08:28:38 
+
+[INFO]    [com.revature.ui.client.TransferMoneyMenu]    
+Send Money Feb-11-2021 Thursday PST 08:28:41 
+
+[INFO]    [com.revature.ui.client.TransferMoneyMenu]    
+Enter Recipient Username:  Feb-11-2021 Thursday PST 08:28:41 
+
+[INFO]    [com.revature.ui.client.TransferMoneyMenu]    
+Enter Amount of Money to transfer Feb-11-2021 Thursday PST 08:28:52 
+
+[INFO]    [com.revature.ui.client.TransferMoneyMenu]    
+ === Transfer Funds ===  Feb-11-2021 Thursday PST 08:28:56 
+
+[INFO]    [com.revature.ui.client.TransferMoneyMenu]    
+========================= Feb-11-2021 Thursday PST 08:28:56 
+
+[INFO]    [com.revature.ui.client.TransferMoneyMenu]    
+1. Send Money Feb-11-2021 Thursday PST 08:28:56 
+
+[INFO]    [com.revature.ui.client.TransferMoneyMenu]    
+2. Receive Money Feb-11-2021 Thursday PST 08:28:56 
+
+[INFO]    [com.revature.ui.client.TransferMoneyMenu]    
+3. Back Feb-11-2021 Thursday PST 08:28:56 
+
+[INFO]    [com.revature.ui.login.Login]    
+Invalid selection. Please try again. Feb-11-2021 Thursday PST 08:36:27 
+
+[DEBUG]    [com.revature.services.clientServices.ClientServices]    
+Something went wrong connecting to the Database Feb-11-2021 Thursday PST 13:07:05 
+
+[DEBUG]    [com.revature.services.clientServices.ClientServices]    
+Something went wrong connecting to the Database Feb-11-2021 Thursday PST 13:10:53 
+
+[DEBUG]    [com.revature.services.clientServices.ClientServices]    
+Something went wrong connecting to the Database Feb-11-2021 Thursday PST 13:11:29 
+
+[DEBUG]    [com.revature.services.clientServices.ClientServices]    
+Something went wrong connecting to the Database Feb-11-2021 Thursday PST 13:12:04 
+
+[DEBUG]    [com.revature.services.clientServices.ClientServices]    
+Something went wrong connecting to the Database Feb-11-2021 Thursday PST 13:12:34 
+
+[DEBUG]    [com.revature.dao.bankDao.BankDaoImpl]    
+-21.0 accountDeposit ln 52 Feb-11-2021 Thursday PST 13:19:42 
+
+[DEBUG]    [com.revature.dao.bankDao.BankDaoImpl]    
+25.0 accountDeposit ln 52 Feb-11-2021 Thursday PST 13:19:42 
+
+[INFO]    [com.revature.dao.bankDao.BankDaoImpl]    
+Invalid Deposit Amount. Please try again. Feb-11-2021 Thursday PST 13:24:53 
+
+[DEBUG]    [com.revature.dao.bankDao.BankDaoImpl]    
+25.0 accountDeposit ln 52 Feb-11-2021 Thursday PST 13:24:53 
+
+[INFO]    [com.revature.dao.bankDao.BankDaoImpl]    
+Invalid Deposit Amount. Please try again. Feb-11-2021 Thursday PST 13:25:13 
+
+[DEBUG]    [com.revature.dao.bankDao.BankDaoImpl]    
+25.0 accountDeposit ln 52 Feb-11-2021 Thursday PST 13:25:13 
+
+[DEBUG]    [com.revature.dao.bankDao.BankDaoImpl]    
+25.0 accountDeposit ln 52 Feb-11-2021 Thursday PST 13:25:46 
+
+[INFO]    [com.revature.dao.bankDao.BankDaoImpl]    
+Invalid Deposit Amount. Please try again. Feb-11-2021 Thursday PST 13:29:30 
+
+[INFO]    [com.revature.dao.bankDao.BankDaoImpl]    
+Invalid Withdraw Amount. Please try again. Feb-11-2021 Thursday PST 13:30:19 
+
+[INFO]    [com.revature.dao.bankDao.BankDaoImpl]    
+Invalid Deposit Amount. Please try again. Feb-11-2021 Thursday PST 13:30:19 
+
+[DEBUG]    [com.revature.dao.bankDao.BankDaoImpl]    
+25.0 accountDeposit ln 52 Feb-11-2021 Thursday PST 13:30:19 
+
+[DEBUG]    [com.revature.services.clientServices.ClientServices]    
+Something went wrong connecting to the Database Feb-11-2021 Thursday PST 13:30:19 
+
+[INFO]    [com.revature.ui.login.ClientLogin]    
+Invalid Username or Password. Please Try again Feb-11-2021 Thursday PST 17:09:21 
+
+[DEBUG]    [com.revature.ui.login.ClientLogin]    
+Invalid Username/Password -- Username: Deltron-- Password: tototo Feb-11-2021 Thursday PST 17:09:21 
+
+[DEBUG]    [com.revature.ui.client.ClientMenu]    
+Client [accountBalance=600.0, accountId=2, accountNumber=15409, accountType=Checking, age=25, firstName=Dalton, gender=male, id=2, lastName=Spencer, password= ********, username=deltron] Feb-11-2021 Thursday PST 17:09:33 
+
+[INFO]    [com.revature.ui.client.ClientBalancesMenu]    
+ === Account Balances ===  Feb-11-2021 Thursday PST 17:09:36 
+
+[INFO]    [com.revature.ui.client.ClientBalancesMenu]    
+========================== Feb-11-2021 Thursday PST 17:09:36 
+
+[DEBUG]    [com.revature.dao.clientDao.ClientDaoImpl]    
+[BankAccount [accountBalance=600.0, accountId=0, accountNum=15409, accountOwner=deltron, accountType=Checking]] EDAO Feb-11-2021 Thursday PST 17:09:36 
+
+[INFO]    [com.revature.ui.client.ClientBalancesMenu]    
+BankAccount [accountBalance=600.0, accountId=0, accountNum=15409, accountOwner=deltron, accountType=Checking] Feb-11-2021 Thursday PST 17:09:36 
+
+[DEBUG]    [com.revature.ui.bank.WithdrawAndDeposit]    
+Client [accountBalance=600.0, accountId=2, accountNumber=15409, accountType=Checking, age=25, firstName=Dalton, gender=male, id=2, lastName=Spencer, password= ********, username=deltron]WithdrawDeposit Menu Feb-11-2021 Thursday PST 17:10:19 
+
+[INFO]    [com.revature.ui.bank.WithdrawAndDeposit]    
+ === Withdraw and Deposit ===  Feb-11-2021 Thursday PST 17:10:19 
+
+[INFO]    [com.revature.ui.bank.WithdrawAndDeposit]    
+================================ Feb-11-2021 Thursday PST 17:10:19 
+
+[INFO]    [com.revature.ui.bank.WithdrawAndDeposit]    
+What would you like to do? Feb-11-2021 Thursday PST 17:10:19 
+
+[INFO]    [com.revature.ui.bank.WithdrawAndDeposit]    
+1. Withdraw Money Feb-11-2021 Thursday PST 17:10:19 
+
+[INFO]    [com.revature.ui.bank.WithdrawAndDeposit]    
+2. Deposit Money Feb-11-2021 Thursday PST 17:10:19 
+
+[INFO]    [com.revature.ui.bank.WithdrawAndDeposit]    
+3. Back Feb-11-2021 Thursday PST 17:10:19 
+
+[INFO]    [com.revature.ui.bank.WithdrawAndDeposit]    
+How much would you like to withdraw? Feb-11-2021 Thursday PST 17:10:20 
+
+[INFO]    [com.revature.ui.bank.WithdrawAndDeposit]    
+Input cannot be negative. Feb-11-2021 Thursday PST 17:10:23 
+
+[INFO]    [com.revature.dao.bankDao.BankDaoImpl]    
+Invalid Withdraw Amount. Please try again. Feb-11-2021 Thursday PST 17:10:23 
+
+[INFO]    [com.revature.ui.bank.WithdrawAndDeposit]    
+ === Withdraw and Deposit ===  Feb-11-2021 Thursday PST 17:10:23 
+
+[INFO]    [com.revature.ui.bank.WithdrawAndDeposit]    
+================================ Feb-11-2021 Thursday PST 17:10:23 
+
+[INFO]    [com.revature.ui.bank.WithdrawAndDeposit]    
+What would you like to do? Feb-11-2021 Thursday PST 17:10:23 
+
+[INFO]    [com.revature.ui.bank.WithdrawAndDeposit]    
+1. Withdraw Money Feb-11-2021 Thursday PST 17:10:23 
+
+[INFO]    [com.revature.ui.bank.WithdrawAndDeposit]    
+2. Deposit Money Feb-11-2021 Thursday PST 17:10:23 
+
+[INFO]    [com.revature.ui.bank.WithdrawAndDeposit]    
+3. Back Feb-11-2021 Thursday PST 17:10:23 
+
+[INFO]    [com.revature.ui.client.ClientBalancesMenu]    
+ === Account Balances ===  Feb-11-2021 Thursday PST 17:10:31 
+
+[INFO]    [com.revature.ui.client.ClientBalancesMenu]    
+========================== Feb-11-2021 Thursday PST 17:10:31 
+
+[DEBUG]    [com.revature.dao.clientDao.ClientDaoImpl]    
+[BankAccount [accountBalance=600.0, accountId=0, accountNum=15409, accountOwner=deltron, accountType=Checking]] EDAO Feb-11-2021 Thursday PST 17:10:31 
+
+[INFO]    [com.revature.ui.client.ClientBalancesMenu]    
+BankAccount [accountBalance=600.0, accountId=0, accountNum=15409, accountOwner=deltron, accountType=Checking] Feb-11-2021 Thursday PST 17:10:31 
+
+[INFO]    [com.revature.ui.login.Login]    
+Invalid selection. Please try again. Feb-11-2021 Thursday PST 17:11:49 
+
